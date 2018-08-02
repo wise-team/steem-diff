@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Steemdiff layered demo</title>
+
+    <style>
+body {
+    margin-top: 2em;
+}
+
+.img-paragraph {
+    text-align: center;
+}
+
+.img-paragraph img {
+    width: 80%;
+}
+
+/* general settings */
+
+.layers-container {
+    width: 500px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.layered {
+    width: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.layer-content-relativizer {
+    overflow: hidden;
+}
+
+.layer-content-container {
+    background: rgba(255, 255, 255, 0.5);
+    width: 500px;
+}
+
+.slider {
+    position: absolute;
+    top: 110px;
+    left: 180px;
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 255, 0.5);
+    border: 4px solid blue;
+    cursor: ew-resize;
+    border-radius: 8px;
+}
+
+
+/* position settings */
+
+.layered-left {
+    width: 200px;
+    left: 0px;
+    border-right: 1px solid blue;
+}
+
+.layered-left .layer-content-container {
+    left: 0;
+}
+
+.layered-right {
+    width: 300px;
+    left: 200px;
+    border-left: 1px solid blue;
+}
+
+.layered-right .layer-content-container {
+    margin-left: -200px;
+}
+    </style>
+</head>
+<body>
+    <div class="layers-container" id="layers-container">
+        <div class="layered layered-left" id="layered-1">
+            <div class="layer-content-relativizer"><div class="layer-content-container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna nunc, interdum eu nisl eget, porta hendrerit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Curabitur molestie odio eu orci vestibulum, a bibendum sem scelerisque. Suspendisse tincidunt velit diam, ac fringilla erat porta ac. Phasellus bibendum id ligula ut suscipit. Morbi condimentum lectus massa, non porttitor arcu elementum sed. Suspendisse imperdiet luctus arcu vitae hendrerit.
+            </p>
+            <p class="img-paragraph">
+                <img src="img1.png" />
+            </p>
+            <h2>Nam pulvinar</h2>
+            <p>Nam pulvinar risus justo, id cursus ipsum porttitor sed. Nunc ut sem vitae dui aliquam ornare. Sed convallis aliquam dui et interdum. Sed dapibus luctus aliquet. Proin lacinia eget lorem sit amet varius. Nunc tincidunt nunc a enim porttitor, sed egestas lectus varius. Cras luctus ornare neque ac euismod. Integer dolor dolor, facilisis vitae ipsum eget, semper pellentesque orci. Duis eu bibendum ligula. Etiam ut mi commodo, auctor justo nec, facilisis libero. Proin tempor feugiat faucibus. Quisque et nunc id neque rhoncus molestie id vel nibh. Proin lobortis eget lectus non pretium.
+            </p>
+            <h2>Ut varius</h2>
+            <p>Ut varius mi eu dolor molestie, vitae hendrerit lectus vulputate. Fusce tempor rhoncus elementum. Integer mattis efficitur nisi, sit amet semper lacus sodales et. Quisque odio orci, consequat a dolor eu, volutpat pellentesque nibh. Ut varius nibh ac leo tempus, sed ultrices urna condimentum. Pellentesque porta justo felis. Proin vitae lectus ut sem ullamcorper efficitur. Sed aliquam, felis sit amet luctus luctus, dolor libero interdum dolor, vel sollicitudin odio nibh tincidunt libero. Duis ipsum odio, sagittis id rutrum quis, pellentesque vel sem. Suspendisse orci est, tincidunt quis ante ut, tempor suscipit tortor. Aliquam erat volutpat. Mauris lobortis, mauris id luctus vestibulum, dui velit tempus magna, ut pellentesque quam ligula a purus. Aliquam aliquet rutrum diam, ac accumsan lacus viverra a.
+            </p>
+            <p>Nulla nec pretium turpis. Nam vel quam in lorem egestas venenatis. Nullam finibus luctus viverra. Aenean at interdum diam. Curabitur et dolor vitae sem convallis volutpat gravida et nisi. Mauris eu tempor ante. Sed malesuada eu nunc nec faucibus. Nullam vel purus at ligula pulvinar rhoncus vel in nibh. Curabitur nec pharetra purus. Nunc venenatis ut augue vitae mollis. Sed ultricies ut elit at vehicula. Donec interdum dolor neque, nec consequat eros aliquet eu. Praesent egestas lectus ut laoreet sollicitudin. Sed accumsan ante nibh, quis pharetra erat finibus eget. Donec sit amet mauris vel quam pellentesque suscipit a et ipsum.
+            </p>
+            <p>Sed sed felis semper, laoreet diam quis, consequat neque. Nulla ligula est, aliquet id arcu eu, tempus suscipit dui. Pellentesque ornare augue lectus, elementum finibus quam faucibus quis. Duis at erat in nibh sollicitudin vehicula sit amet quis purus. Curabitur dictum nisl volutpat diam tempor varius. Sed ut auctor nulla. Aliquam a leo sed sapien laoreet varius. Aenean a congue turpis. Donec at condimentum justo. Integer a urna elit.
+            </p>
+            </div></div>
+        </div>
+        <div class="layered layered-right" id="layered-2">
+            <div class="layer-content-relativizer"><div class="layer-content-container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna nunc, interdum eu nisl eget, porta hendrerit nulla. Class aptent taciti sociosqu ad <strong>litora torquent</strong> per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Curabitur molestie odio eu orci vestibulum, a bibendum sem scelerisque. Suspendisse tincidunt velit diam, ac fringilla erat porta ac. Phasellus bibendum id ligula ut suscipit. Morbi condimentum lectus massa, non porttitor arcu elementum sed. Suspendisse imperdiet luctus arcu vitae hendrerit.
+            </p>
+            <p class="img-paragraph">
+                <img src="img2.png" />
+            </p>
+            <h2>Donec fermentum</h2>
+            <p>Donec fermentum, dui sit amet feugiat hendrerit, nisl mauris viverra orci, in feugiat ligula nunc ut turpis. Phasellus ornare lobortis justo et bibendum. Ut nec dui non ipsum condimentum mollis. Ut rutrum metus quis tristique sollicitudin. Quisque pellentesque, libero nec faucibus porta, dolor odio tempus urna, ultrices mollis ex nisi at mi. Curabitur est magna, molestie et blandit et, porttitor fringilla nulla. Aliquam ut condimentum lorem. Nulla sed risus at nisi mattis porta bibendum at odio. Nunc iaculis velit et metus elementum feugiat ac accumsan urna.
+            </p>
+            <h2>Ut varius</h2>
+            <p>Ut varius mi eu dolor molestie, vitae hendrerit lectus vulputate. Fusce tempor rhoncus elementum. Integer mattis efficitur nisi, sit amet semper lacus sodales et. Quisque odio orci, consequat a dolor eu, volutpat pellentesque nibh. Ut varius nibh ac leo tempus, sed ultrices urna condimentum. Pellentesque porta justo felis. Proin vitae lectus ut sem ullamcorper efficitur. Sed aliquam, felis sit amet luctus luctus, dolor libero interdum dolor, vel sollicitudin odio nibh tincidunt libero. Duis ipsum odio, sagittis id rutrum quis, pellentesque vel sem. Suspendisse orci est, tincidunt quis ante ut, tempor suscipit tortor. Aliquam erat volutpat. Mauris lobortis, mauris id luctus vestibulum, dui velit tempus magna, ut pellentesque quam ligula a purus. Aliquam aliquet rutrum diam, ac accumsan lacus viverra a.
+            </p>
+            <p>Nulla nec pretium turpis. Nam vel quam in lorem egestas venenatis. Nullam finibus luctus viverra. Aenean at interdum diam. Curabitur et dolor vitae sem convallis volutpat gravida et nisi. Mauris eu tempor ante. Sed malesuada eu nunc nec faucibus. Nullam vel purus at ligula pulvinar rhoncus vel in nibh. Curabitur nec pharetra purus. Nunc venenatis ut augue vitae mollis. Sed ultricies ut elit at vehicula. Donec interdum dolor neque, nec consequat eros aliquet eu. Praesent egestas lectus ut laoreet sollicitudin. Sed accumsan ante nibh, quis pharetra erat finibus eget. Donec sit amet mauris vel quam pellentesque suscipit a et ipsum.
+            </p>
+            <p>Sed sed felis semper, laoreet diam quis, consequat neque. Nulla ligula est, aliquet id arcu eu, tempus suscipit dui. Pellentesque ornare augue lectus, elementum finibus quam faucibus quis. Duis at erat in nibh sollicitudin vehicula sit amet quis purus. Curabitur dictum nisl volutpat diam tempor varius. Sed ut auctor nulla. Aliquam a leo sed sapien laoreet varius. Aenean a congue turpis. Donec at condimentum justo. Integer a urna elit.
+            </p>
+            <p>Donec fermentum, dui sit amet feugiat hendrerit, nisl mauris viverra orci, in feugiat ligula nunc ut turpis. Phasellus ornare lobortis justo et bibendum. Ut nec dui non ipsum condimentum mollis. Ut rutrum metus quis tristique sollicitudin. Quisque pellentesque, libero nec faucibus porta, dolor odio tempus urna, ultrices mollis ex nisi at mi. Curabitur est magna, molestie et blandit et, porttitor fringilla nulla. Aliquam ut condimentum lorem. Nulla sed risus at nisi mattis porta bibendum at odio. Nunc iaculis velit et metus elementum feugiat ac accumsan urna.
+            </p>
+            </div></div>
+        </div>
+
+        <div class="slider" id="slider-1"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(() => {
+            var layersContainer = $("#layers-container");
+            var leftLayer = $("#layered-1");
+            var rightLayer = $("#layered-2");
+            var rightLayerContentContainer = $("#layered-2 .layer-content-container");
+            var slider = $("#slider-1");
+
+            const height = Math.max(leftLayer.height(), rightLayer.height());
+            leftLayer.height(height);
+            rightLayer.height(height);
+
+            var mousePressed = false;
+            slider.on("mousedown", (e) => {
+                mousePressed = true;
+            });
+            $(document).on("mouseup", (e) => {
+                mousePressed = false;
+            });
+
+            
+            $(document.body).on("mousemove", function(e) {
+                const leftOffset = e.pageX - layersContainer.offset().left;
+                if (leftOffset > 0 && leftOffset < 500) {
+                    if (mousePressed) {
+                        slider.css("left", (leftOffset - 20) + "px");
+                        leftLayer.width(leftOffset);
+                        rightLayer.width(500 - leftOffset);
+                        rightLayer.css("left", leftOffset + "px");
+                        rightLayerContentContainer.css("margin-left", "-" + leftOffset + "px");
+                    }
+
+                    const topOffset = e.pageY - layersContainer.offset().top;
+                    if (topOffset > 0 && topOffset < height) {
+                        slider.css("top", (topOffset - 20) + "px");
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
